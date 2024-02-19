@@ -16,4 +16,5 @@ require "nvim-treesitter.configs".setup {
 require "highlight-undo".setup {} require "typst-preview".setup {} require "leap".create_default_mappings {}
 require "better_escape".setup { mapping = { "jk", "jK", "Jk", "JK", "kj", "kJ", "Kj", "KJ" } }
 require "gitsigns".setup { preview_config = { border =  "rounded", row = 1, col = 1, } }
+require "spider".setup { skipInsignificantPunctuation = false }
 require "which-key".setup {} require "colorizer".setup ()
