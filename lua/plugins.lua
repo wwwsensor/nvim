@@ -1,6 +1,6 @@
 require "nvim-treesitter.configs".setup {
   -- Parsers (can use `all`) (1-5 mandatory)
-  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "bash", "toml", "json", "yaml" },
+  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "bash", "go", "toml", "json", "yaml" },
   auto_install = false,
   highlight = {
     enable = true,

@@ -16,6 +16,17 @@ require "mason-lspconfig".setup {
 }
 -- Init & setup
 local ls = require "lspconfig"
+ls.gopls.setup {
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true,
+      gofumpt = true,
+    },
+  },
+}
 ls.lua_ls.setup {}
 ls.bashls.setup { filetypes = { "sh", "zsh" } }
 ------------------------------
