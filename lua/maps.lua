@@ -49,6 +49,8 @@ umap({"n", "v"}, "H", "0^")
 umap({"n", "v"}, "J", "5j")
 umap({"n", "v"}, "K", "5k")
 umap({"n", "v"}, "L", "$")
+-- Rerun last command
+umap({"n", "v"}, "<C-;>", ":<Up><CR>")
 -- Switch matches keeping cursor centered
 umap({"n", "v"}, "n", "nzzzv")
 umap({"n", "v"}, "N", "Nzzzv")
