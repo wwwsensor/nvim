@@ -44,3 +44,6 @@ themselves, so make sure you call files which
 doesn't match the name of the plugins exactly
 --]]
 require "ui" require "lsp" require "plugins" require "maps" require "opts"
+
+
+---------- REMINDER TO USE A NEW STATUS & BUFFER LINE
