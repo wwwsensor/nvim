@@ -1,7 +1,11 @@
+--[[ LSP-ZERO
+It simplifies using LSP in Neovim
+https://lsp-zero.netlify.app
+--]]
+local lspz = require "lsp-zero"
+
 --- LSP ----------------------
 -- Management
--- LSP-ZERO : https://lsp-zero.netlify.app
-local lspz = require "lsp-zero"
 require "mason".setup {}
 require "mason-lspconfig".setup {
   ensure_installed = { "lua_ls", "bashls" },
@@ -17,8 +21,6 @@ lspc.bashls.setup { filetypes = { "sh", "zsh" } }
 local cmp = require "cmp"
 local cmp_action = lspz.cmp_action()
 cmp.setup {
-  completion = { completeopt = "menu,menuone,noinsert" },
-  formatting = { fields = { "menu", "abbr", "kind" } },
   preselect = "item",
   sources = {
     { name = "nvim_lsp" },
@@ -27,6 +29,8 @@ cmp.setup {
     { name = "buffer" },
     { name = "path" }
   },
+  formatting = { fields = { "menu", "abbr", "kind" } },
+  completion = { completeopt = "menu,menuone,noinsert" },
   mapping = {
     ["<C-h>"] = cmp.mapping.abort(),
     ["<C-j>"] = cmp_action.luasnip_supertab(),
