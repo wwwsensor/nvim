@@ -14,22 +14,23 @@ require "lazy".setup {
   "max397574/better-escape.nvim",
   { "folke/which-key.nvim", lazy = true },
   { "rcarriga/nvim-notify", lazy = true },
+  { "nvimtools/none-ls.nvim", lazy = true },
   { "lewis6991/gitsigns.nvim", lazy = true },
   { "chrisgrieser/nvim-spider", lazy = true },
   { "norcalli/nvim-colorizer.lua", lazy = true },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
+  -- Libraries
+  "nvim-lua/plenary.nvim",
+
   -- LSP
   "neovim/nvim-lspconfig", "VonHeikemen/lsp-zero.nvim",
 
   -- Mason
-  "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim", "nvimtools/none-ls.nvim",
+  "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim",
 
   -- Completion
   "hrsh7th/nvim-cmp", "hrsh7th/cmp-path", "hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp", "L3MON4D3/LuaSnip",
-
-  -- Libraries
-  "nvim-lua/plenary.nvim",
 
   -- Specific
   { "chomosuke/typst-preview.nvim", lazy = true }
