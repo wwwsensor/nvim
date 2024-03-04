@@ -9,12 +9,13 @@ end
 ------------------------------
 
 --- LSP ----------------------
+local vl = vim.lsp
 -- Show info about hovered symbol with f instead of K
-umap("n", "f", vim.lsp.buf.hover)
+umap({"n", "v"}, "f", vl.buf.hover)
 -- Format buffer
-umap("n", "<leader>gf", vim.lsp.buf.format)
+umap({"n", "v"}, "F", vl.buf.format)
 -- Trigger code action
-umap({"n", "v"}, "gc", vim.lsp.buf.code_action)
+umap({"n", "v"}, "t", vl.buf.code_action)
 ------------------------------
 
 -- SPIDER --------------------
@@ -24,31 +25,52 @@ umap({"n", "o", "x"}, "b", ":lua require 'spider'.motion 'b'<CR>")
 ------------------------------
 
 --- GITSIGNS -----------------
-umap("n", "gh", ":Gitsigns preview_hunk inline<CR>") umap("n", "gb", ":Gitsigns toggle_current_line_blame<CR>")
+umap("n", "gh", ":Gitsigns preview_hunk inline<CR>")
+umap("n", "gb", ":Gitsigns toggle_current_line_blame<CR>")
 ------------------------------
 
--- Properly "amplify" HJKL
-umap({"n", "v"}, "J", "6j") umap({"n", "v"}, "K", "6k") umap({"n", "v"}, "H", "0^") umap({"n", "v"}, "L", "$")
--- Globally replace string
-umap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
--- Make file executable
-umap("n", "<leader>x", ":silent !chmod +x %<CR>")
--- Unhightlight search
-umap({"n", "i", "v"}, "<C-s>", vim.cmd.nohl)
--- Source file
-umap("n", "<leader><leader>", ":so %<CR>")
+--- N MODE -------------------
 -- Globally delete lines with string
 umap("n", "<leader>S", [[:g/<C-r><C-w>/d]])
+-- Globally replace string
+umap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+------------------------------
+
+--- C MODE -------------------
+umap("c", "<C-h>", "<ESC>")
+umap("c", "<C-j>", "<Down>")
+umap("c", "<C-k>", "<Up>")
+umap("c", "<C-l>", "<CR>")
+------------------------------
+
+--- N, V, S MODES ------------
+-- Properly "amplify" HJKL
+umap({"n", "v"}, "H", "0^")
+umap({"n", "v"}, "J", "5j")
+umap({"n", "v"}, "K", "5k")
+umap({"n", "v"}, "L", "$")
 -- Switch matches keeping cursor centered
-umap("n", "n", "nzzzv")
-umap("n", "N", "Nzzzv")
--- Del into void register
+umap({"n", "v"}, "n", "nzzzv")
+umap({"n", "v"}, "N", "Nzzzv")
+-- Source file
+umap({"n", "v"}, "<leader><leader>", ":so %<CR>")
+-- Make file executable
+umap({"n", "v"}, "<leader>x", ":silent !chmod +x %<CR>")
+------------------------------
+
+--- ALWAYS -------------------
+-- Unhightlight search matches
+umap({"n", "v", "i"}, "<C-s>", vim.cmd.nohl)
+-- Append line below to current line
+umap({"n", "v", "i"}, "<C-a>", "J")
+------------------------------
+
+--- VOID REGISTERING ---------
+-- Deleting
+umap({"n", "v"}, "x", [["_x]])
+umap({"n", "v"}, "X", [["_X]])
 umap({"n", "v"}, "<leader>d", [["_d]])
 umap({"n", "v"}, "<leader>D", [["_D]])
-umap("n", "x", [["_x]])
--- Yank into void register
-umap("x", "<leader>p", [["_dP]])
--- Append line below to current line
-umap("n", "<C-a>", "J")
--- Demap Q
-umap("n", "Q", "<nop>")
+-- Yanking
+umap({"n", "v"}, "<leader>p", [["_dP]])
+------------------------------
