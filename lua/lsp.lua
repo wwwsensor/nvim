@@ -1,6 +1,6 @@
 --- LSP-ZERO -----------------
--- https://lsp-zero.netlify.app/v3.x/getting-started.html
--- Enable LSP mappings with at attachment (overridables)
+-- https://lsp-zero.netlify.app
+-- Enable default LSP mappings at attachment
 local lsp_zero = require "lsp-zero"
 lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
@@ -16,17 +16,6 @@ require "mason-lspconfig".setup {
 }
 -- Init & setup
 local ls = require "lspconfig"
-ls.gopls.setup {
-  settings = {
-    gopls = {
-      analyses = {
-        unusedparams = true,
-      },
-      staticcheck = true,
-      gofumpt = true,
-    },
-  },
-}
 ls.lua_ls.setup {}
 ls.bashls.setup { filetypes = { "sh", "zsh" } }
 ------------------------------

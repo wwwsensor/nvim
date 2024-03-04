@@ -6,35 +6,34 @@ vim.opt.rtp:prepend(lazypath)
 
 --- PLUGINS ------------------
 require "lazy".setup {
-  -- Libraries
-  "nvim-lua/plenary.nvim",
 
-  -- Mappings helper
-  "folke/which-key.nvim",
-  -- Git previewer
-  "lewis6991/gitsigns.nvim",
-  -- Animate undo
+  "catppuccin/nvim",
+  "ggandor/leap.nvim",
+  "nvim-lualine/lualine.nvim",
   "tzachar/highlight-undo.nvim",
-  -- Colorize color codes
-  "norcalli/nvim-colorizer.lua",
-  -- Ultimate motions and quicker normal mode
-  "ggandor/leap.nvim", "max397574/better-escape.nvim",
-  -- Move by subwords and skip insignificant punctuation
+  "max397574/better-escape.nvim",
+  { "folke/which-key.nvim", lazy = true },
+  { "rcarriga/nvim-notify", lazy = true },
+  { "lewis6991/gitsigns.nvim", lazy = true },
   { "chrisgrieser/nvim-spider", lazy = true },
-  -- Ultimate highlighting
+  { "norcalli/nvim-colorizer.lua", lazy = true },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-  -- Colorscheme, nicer notifications and statusline
-  "catppuccin/nvim", "rcarriga/nvim-notify", "nvim-lualine/lualine.nvim",
 
   -- LSP
   "neovim/nvim-lspconfig", "VonHeikemen/lsp-zero.nvim",
+
   -- Mason
   "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim", "nvimtools/none-ls.nvim",
+
   -- Completion
   "hrsh7th/nvim-cmp", "hrsh7th/cmp-path", "hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp", "L3MON4D3/LuaSnip",
 
-  -- Typst
-  "chomosuke/typst-preview.nvim",
+  -- Libraries
+  "nvim-lua/plenary.nvim",
+
+  -- Specific
+  { "chomosuke/typst-preview.nvim", lazy = true }
+
 }
 ------------------------------
 
