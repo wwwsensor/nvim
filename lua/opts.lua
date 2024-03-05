@@ -8,6 +8,9 @@ local o = vim.opt
 -- Max time to link keys for a sequence (ms)
 vim.g.timeoutlen = 850
 
+-- Hide cmdline while not being used
+o.cmdheight = 0
+
 -- Share clipboard with sys
 o.clipboard:append "unnamedplus"
 
