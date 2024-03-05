@@ -14,7 +14,6 @@ require "lazy".setup {
   "max397574/better-escape.nvim",
   { "folke/which-key.nvim", lazy = true },
   { "rcarriga/nvim-notify", lazy = true },
-  { "nvimtools/none-ls.nvim", lazy = true },
   { "lewis6991/gitsigns.nvim", lazy = true },
   { "chrisgrieser/nvim-spider", lazy = true },
   { "norcalli/nvim-colorizer.lua", lazy = true },
