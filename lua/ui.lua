@@ -1,6 +1,5 @@
-vim.g.moonflyCursorColor = true
-vim.g.moonflyTransparent = true
-vim.cmd.colo "moonfly"
+vim.opt.termguicolors = true
+vim.cmd.colo "gotham"
 
 vim.notify = require "notify"
 require "notify".setup {

@@ -17,9 +17,6 @@ o.fillchars = "eob:·"
 -- Vert scrolling margin
 o.scrolloff = 8
 
--- 24-bit RGB color
-o.termguicolors = true
-
 -- Autoindent
 o.autoindent = true
 o.shiftwidth = 2
