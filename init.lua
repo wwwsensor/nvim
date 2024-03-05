@@ -7,8 +7,8 @@ vim.opt.rtp:prepend(lazypath)
 --- PLUGINS ------------------
 require "lazy".setup {
 
-  "catppuccin/nvim",
   "ggandor/leap.nvim",
+  "bluz71/vim-moonfly-colors",
   "nvim-lualine/lualine.nvim",
   "tzachar/highlight-undo.nvim",
   "max397574/better-escape.nvim",

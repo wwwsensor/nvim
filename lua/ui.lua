@@ -1,14 +1,6 @@
-require "catppuccin".setup {
-  integrations = { notify = true },
-  transparent_background = true,
-  show_end_of_buffer = true,
-  dim_inactive = {
-    enabled = false,
-    shade = "dark",
-    percentage = "0.10"
-  },
-}
-vim.cmd.colo "catppuccin"
+vim.g.moonflyCursorColor = true
+vim.g.moonflyTransparent = true
+vim.cmd.colo "moonfly"
 
 vim.notify = require "notify"
 require "notify".setup {
@@ -26,10 +18,8 @@ require "notify".setup {
 
 require "lualine".setup {
   options = {
-    icons_enabled = true,
-    theme = "auto",
-    component_separators = { left = "", right = "" },
-    section_separators   = { left = "", right = "" },
+    component_separators = { left = '|', right = '|'},
+    section_separators = { left = '', right = ''},
     disabled_filetypes = {
       statusline = {},
       winbar = {},
@@ -43,20 +33,19 @@ require "lualine".setup {
       winbar = 1000,
     }
   },
-  -- A|B|C   X|Y|Z ---
   sections = {
-    lualine_a = {"mode"},
-    lualine_b = {"branch", "diff", "diagnostics"},
-    lualine_c = {"filename"},
+    lualine_a = { 'mode'},
+    lualine_b = {'location', 'diagnostics'},
+    lualine_c = {'filename'},
     lualine_x = {},
-    lualine_y = {"progress"},
-    lualine_z = {"location"}
+    lualine_y = {'progress'},
+    lualine_z = {'branch'}
   },
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},
-    lualine_c = {"filename"},
-    lualine_x = {"location"},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
     lualine_y = {},
     lualine_z = {}
   },
