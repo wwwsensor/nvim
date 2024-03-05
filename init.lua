@@ -8,9 +8,8 @@ vim.opt.rtp:prepend(lazypath)
 require "lazy".setup {
 
   "ggandor/leap.nvim",
-  "whatyouhide/vim-gotham",
+  "folke/tokyonight.nvim",
   "nvim-lualine/lualine.nvim",
-  "xiyaowong/transparent.nvim",
   "tzachar/highlight-undo.nvim",
   "max397574/better-escape.nvim",
   { "folke/which-key.nvim", lazy = true },

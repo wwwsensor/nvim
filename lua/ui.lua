@@ -1,5 +1,14 @@
 vim.opt.termguicolors = true
-vim.cmd.colo "gotham"
+require "tokyonight".setup {
+  style = "night",
+  transparent = true,
+  light_style = "day",
+  lualine_bold = true,
+  styles = { sidebars = "transparent" },
+  -- Replace inactive statuslines with a thin border
+  hide_inactive_statusline = false
+}
+vim.cmd.colo "tokyonight"
 
 vim.notify = require "notify"
 require "notify".setup {
