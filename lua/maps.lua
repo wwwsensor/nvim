@@ -49,8 +49,10 @@ umap({"n", "v"}, "H", "0^")
 umap({"n", "v"}, "J", "5j")
 umap({"n", "v"}, "K", "5k")
 umap({"n", "v"}, "L", "$")
+-- Enter command mode easily
+umap({"n", "v"}, ";", ":")
 -- Rerun last command
-umap({"n", "v"}, "<C-;>", ":<Up><CR>")
+umap({"n", "v"}, ":", ":<Up><CR>")
 -- Switch matches keeping cursor centered
 umap({"n", "v"}, "n", "nzzzv")
 umap({"n", "v"}, "N", "Nzzzv")
