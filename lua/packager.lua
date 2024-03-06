@@ -1,4 +1,5 @@
 local opts = {
+  lockfile = nil,
   performance = {
     rtp = {
       disabled_plugins = {
