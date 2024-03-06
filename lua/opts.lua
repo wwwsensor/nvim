@@ -17,6 +17,9 @@ o.clipboard:append "unnamedplus"
 -- Empty side char for margins
 o.fillchars = "eob:·"
 
+-- 24-bit colors
+vim.opt.termguicolors = true
+
 -- Vert scrolling margin
 o.scrolloff = 8
 
