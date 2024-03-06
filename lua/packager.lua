@@ -1,5 +1,5 @@
 local opts = {
-  lockfile = nil,
+  lockfile = "/dev/null",
   performance = {
     rtp = {
       disabled_plugins = {
