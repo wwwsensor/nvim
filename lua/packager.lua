@@ -18,6 +18,7 @@ local opts = {
 }
 local plugins = {
 
+  "folke/noice.nvim",
   "ggandor/leap.nvim",
   "folke/tokyonight.nvim",
   "nvim-lualine/lualine.nvim",
@@ -30,6 +31,7 @@ local plugins = {
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
   -- Libraries
+  "MunifTanjim/nui.nvim",
   "nvim-lua/plenary.nvim",
 
   -- LSP
