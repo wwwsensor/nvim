@@ -38,15 +38,16 @@ umap("c", "<C-l>", "<CR>")
 ------------------------------
 
 --- N, V, S MODES ------------
+-- Replace cmdline with cmdline-window with better mappings
+umap({"n", "v"}, ";", "q:")
+umap({"n", "v"}, "/", "q/")
+umap({"n", "v"}, "?", "q?")
+umap({"n", "v"}, ":", "<cmd><Up><CR>")
 -- Properly "amplify" HJKL
 umap({"n", "v"}, "H", "0^")
 umap({"n", "v"}, "J", "5j")
 umap({"n", "v"}, "K", "5k")
 umap({"n", "v"}, "L", "$")
--- Enter command mode easily
-umap({"n", "v"}, ";", ":")
--- Rerun last command
-umap({"n", "v"}, ":", ":<Up><CR>")
 -- Switch matches keeping cursor centered
 umap({"n", "v"}, "n", "nzzzv")
 umap({"n", "v"}, "N", "Nzzzv")
