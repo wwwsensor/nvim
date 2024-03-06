@@ -12,6 +12,9 @@ vim.g.timeoutlen = 850
 o.cmdwinheight = 1
 o.cmdheight = 0
 
+-- Draw statusline only in current window
+o.laststatus = 3
+
 -- Share clipboard with sys
 o.clipboard:append "unnamedplus"
 
