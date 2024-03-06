@@ -30,19 +30,9 @@ umap("n", "<leader>S", [[:g/<C-r><C-w>/d]])
 umap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 ------------------------------
 
---- C MODE -------------------
-umap("c", "<C-h>", "<ESC>")
-umap("c", "<C-j>", "<Down>")
-umap("c", "<C-k>", "<Up>")
-umap("c", "<C-l>", "<CR>")
-------------------------------
-
 --- N, V, S MODES ------------
--- Replace cmdline with cmdline-window with better mappings
-umap({"n", "v"}, ";", "q:")
-umap({"n", "v"}, "/", "q/")
-umap({"n", "v"}, "?", "q?")
-umap({"n", "v"}, ":", "<cmd><Up><CR>")
+-- Re-run last command
+umap({"n", "v"}, ":", ":<Up><CR>")
 -- Properly "amplify" HJKL
 umap({"n", "v"}, "H", "0^")
 umap({"n", "v"}, "J", "5j")
@@ -72,4 +62,14 @@ umap({"n", "v"}, "<leader>d", [["_d]])
 umap({"n", "v"}, "<leader>D", [["_D]])
 -- Yanking
 umap({"n", "v"}, "<leader>p", [["_dP]])
+------------------------------
+
+--[[ WARNING
+This replaces cmdline with cmdline-window
+This means cmdline mode doesn't exist now
+--]]
+umap({"n", "v"}, ";", "q:a")
+umap({"n", "v"}, "/", "q/a")
+umap({"n", "v"}, "?", "q?a")
+umap({"n", "v", "i" }, "<C-c>", "<C-c><C-c>")
 ------------------------------
