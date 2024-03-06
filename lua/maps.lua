@@ -18,12 +18,6 @@ umap({"n", "v"}, "F", vl.buf.format)
 umap({"n", "v"}, "t", vl.buf.code_action)
 ------------------------------
 
--- SPIDER --------------------
-umap({"n", "o", "x"}, "w", ":lua require 'spider'.motion 'w'<CR>")
-umap({"n", "o", "x"}, "e", ":lua require 'spider'.motion 'e'<CR>")
-umap({"n", "o", "x"}, "b", ":lua require 'spider'.motion 'b'<CR>")
-------------------------------
-
 --- GITSIGNS -----------------
 umap("n", "gh", ":Gitsigns preview_hunk inline<CR>")
 umap("n", "gb", ":Gitsigns toggle_current_line_blame<CR>")

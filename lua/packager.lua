@@ -27,7 +27,6 @@ local plugins = {
   { "folke/which-key.nvim", lazy = true },
   { "rcarriga/nvim-notify", lazy = true },
   { "lewis6991/gitsigns.nvim", lazy = true },
-  { "chrisgrieser/nvim-spider", lazy = true },
   { "norcalli/nvim-colorizer.lua", lazy = true },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
