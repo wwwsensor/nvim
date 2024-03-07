@@ -20,6 +20,7 @@ local plugins = {
 
   "folke/noice.nvim",
   "ggandor/leap.nvim",
+  "andweeb/presence.nvim",
   "folke/tokyonight.nvim",
   "nvim-lualine/lualine.nvim",
   "tzachar/highlight-undo.nvim",
