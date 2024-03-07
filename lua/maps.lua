@@ -8,7 +8,17 @@ local function umap(modes, lhs, rhs, opts)
 end
 ------------------------------
 
---- LSP ----------------------
+--- N ------------------------
+-- Globally delete lines with string
+umap("n", "<leader>S", [[:g/<C-r><C-w>/d]])
+-- Gitsigns
+umap("n", "gh", ":Gitsigns preview_hunk inline<CR>")
+umap("n", "gb", ":Gitsigns toggle_current_line_blame<CR>")
+-- Globally replace string
+umap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+------------------------------
+
+--- N, V, S ------------------
 local vl = vim.lsp
 -- Show info about hovered symbol with f instead of K
 umap({"n", "v"}, "f", vl.buf.hover)
@@ -16,28 +26,13 @@ umap({"n", "v"}, "f", vl.buf.hover)
 umap({"n", "v"}, "F", vl.buf.format)
 -- Trigger code action
 umap({"n", "v"}, "t", vl.buf.code_action)
-------------------------------
-
---- GITSIGNS -----------------
-umap("n", "gh", ":Gitsigns preview_hunk inline<CR>")
-umap("n", "gb", ":Gitsigns toggle_current_line_blame<CR>")
-------------------------------
-
---- N MODE -------------------
--- Globally delete lines with string
-umap("n", "<leader>S", [[:g/<C-r><C-w>/d]])
--- Globally replace string
-umap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-------------------------------
-
---- N, V, S MODES ------------
--- Re-run last command
-umap({"n", "v"}, ":", ":<Up><CR>")
 -- Properly "amplify" HJKL
 umap({"n", "v"}, "H", "0^")
 umap({"n", "v"}, "J", "5j")
 umap({"n", "v"}, "K", "5k")
 umap({"n", "v"}, "L", "$")
+-- Re-run last command
+umap({"n", "v"}, ":", ":<Up><CR>")
 -- Switch matches keeping cursor centered
 umap({"n", "v"}, "n", "nzzzv")
 umap({"n", "v"}, "N", "Nzzzv")
@@ -48,10 +43,10 @@ umap({"n", "v"}, "<leader>x", ":silent !chmod +x %<CR>")
 ------------------------------
 
 --- ALWAYS -------------------
--- Unhightlight search matches
-umap({"n", "v", "i"}, "<C-s>", vim.cmd.nohl)
 -- Append line below to current line
 umap({"n", "v", "i"}, "<C-a>", "J")
+-- Unhightlight search matches
+umap({"n", "v", "i"}, "<C-s>", vim.cmd.nohl)
 ------------------------------
 
 --- VOID REGISTERING ---------
@@ -72,4 +67,3 @@ umap({"n", "v"}, ";", "q:a")
 umap({"n", "v"}, "/", "q/a")
 umap({"n", "v"}, "?", "q?a")
 umap({"n", "v", "i" }, "<C-c>", "<C-c><C-c>")
-------------------------------

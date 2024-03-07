@@ -9,7 +9,6 @@ require "tokyonight".setup {
 }
 vim.cmd.colo "tokyonight"
 
-vim.notify = require "notify"
 require "notify".setup {
   background_colour = "NotifyBackground",
   fps = 144,
@@ -22,6 +21,7 @@ require "notify".setup {
   timeout = 6000,
   top_down = true
 }
+vim.notify = require "notify"
 
 require "lualine".setup {
   options = {
@@ -41,7 +41,7 @@ require "lualine".setup {
     }
   },
   sections = {
-    lualine_a = { 'mode'},
+    lualine_a = {'mode'},
     lualine_b = {'location', 'diagnostics'},
     lualine_c = {'filename'},
     lualine_x = {},
