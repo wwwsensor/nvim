@@ -8,13 +8,18 @@ local lspz = require "lsp-zero"
 -- Management
 require "mason".setup {}
 require "mason-lspconfig".setup {
-  ensure_installed = { "lua_ls", "bashls" },
+  ensure_installed = { "lua_ls", "bashls", "typst_lsp" },
   handlers = { lspz.default_setup }
 }
 -- Init & setup
 local lspc = require "lspconfig"
 lspc.lua_ls.setup {}
 lspc.bashls.setup { filetypes = { "sh", "zsh" } }
+lspc.typst_lsp.setup {
+  settings = {
+    exportPdf = "onType" -- onType | onSave | never
+  }
+}
 ------------------------------
 
 --- COMPLETION ---------------

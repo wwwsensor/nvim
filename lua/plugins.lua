@@ -14,6 +14,9 @@ require "nvim-treesitter.configs".setup {
 }
 
 require "gitsigns".setup { preview_config = { border = { " ", "", " ", " ", " ", " ", " ", " " }, row = 1, col = 1, } }
-require "highlight-undo".setup {} require "typst-preview".setup {} require "leap".create_default_mappings {}
 require "better_escape".setup { mapping = { "jk", "jK", "Jk", "JK" } }
-require "which-key".setup {} require "colorizer".setup ()
+require "leap".create_default_mappings {}
+vim.g.typst_pdf_viewer = "zathura"
+require "highlight-undo".setup {}
+require "which-key".setup {}
+require "colorizer".setup ()
