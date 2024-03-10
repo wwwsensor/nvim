@@ -6,7 +6,7 @@ local opts = {
         -- https://neovim.io/doc/user/index.html#standard-plugin-list
         -- https://folke/lazy.nvim
         "gzip",
-        "netrwPliugin",
+        "netrwPlugin",
         "rplugin",
         "tarPlugin",
         "tohtml",
@@ -22,6 +22,7 @@ local plugins = {
   "ggandor/leap.nvim",
   "andweeb/presence.nvim",
   "folke/tokyonight.nvim",
+  "akinsho/bufferline.nvim",
   "nvim-lualine/lualine.nvim",
   "tzachar/highlight-undo.nvim",
   "max397574/better-escape.nvim",
@@ -30,6 +31,10 @@ local plugins = {
   { "lewis6991/gitsigns.nvim", lazy = true },
   { "norcalli/nvim-colorizer.lua", lazy = true },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+
+  -- Mini
+  "echasnovski/mini.pairs",
+  "echasnovski/mini.comment",
 
   -- Libraries
   "MunifTanjim/nui.nvim",

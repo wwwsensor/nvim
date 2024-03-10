@@ -1,3 +1,4 @@
+-- Treesitter
 require "nvim-treesitter.configs".setup {
   -- Parsers (can use `all`) (1-5 mandatory)
   ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "bash", "toml", "json", "yaml" },
@@ -13,10 +14,15 @@ require "nvim-treesitter.configs".setup {
   }
 }
 
+-- Mini
+require "mini.comment".setup {}
+require "mini.pairs".setup {}
+
+-- Other
 require "gitsigns".setup { preview_config = { border = { " ", "", " ", " ", " ", " ", " ", " " }, row = 1, col = 1, } }
 require "better_escape".setup { mapping = { "jk", "jK", "Jk", "JK" } }
+require "presence".setup { debounce_timeout = 3 }
 require "leap".create_default_mappings {}
-vim.g.typst_pdf_viewer = "zathura"
 require "highlight-undo".setup {}
 require "which-key".setup {}
 require "colorizer".setup ()
