@@ -4,7 +4,7 @@ local opts = {
     rtp = {
       disabled_plugins = {
         -- https://neovim.io/doc/user/index.html#standard-plugin-list
-        -- https://folke/lazy.nvim
+        -- https://github.com/folke/lazy.nvim
         "gzip",
         "netrwPlugin",
         "rplugin",
