@@ -23,6 +23,7 @@ local plugins = {
   "andweeb/presence.nvim",
   "folke/tokyonight.nvim",
   "akinsho/bufferline.nvim",
+  "lewis6991/spaceless.nvim",
   "nvim-lualine/lualine.nvim",
   "tzachar/highlight-undo.nvim",
   "max397574/better-escape.nvim",
