@@ -26,3 +26,11 @@ require "leap".create_default_mappings {}
 require "highlight-undo".setup {}
 require "which-key".setup {}
 require "colorizer".setup ()
+
+-- Functions
+trimLastBlank = function()
+  local lines = vim.api.nvim_buf_line_count(0)
+  local last_nonblank = vim.fn.prevnonblank(lines)
+  if last_nonblank < lines then vim.api.nvim_buf_set_lines(0, last_nonblank, lines, true, {}) end
+end
+vim.cmd "autocmd BufWrite * lua trimLastBlank()"

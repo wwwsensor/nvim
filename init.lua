@@ -11,6 +11,6 @@ use also use require in it
 require "opts"
 require "maps"
 require "packager"
-require "plugins"
+require "other"
 require "lsp"
 require "ui"
