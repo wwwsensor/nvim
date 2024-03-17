@@ -45,6 +45,8 @@ umap({"n", "v"}, "<leader>D", [["_D]])
 -- Switch matches with centered cursor
 umap({"n", "v"}, "n", "nzzzv")
 umap({"n", "v"}, "N", "Nzzzv")
+-- Enable Shift + Enter
+umap("i", "<S-CR>", "<ESC>lDO<ESC>pa")
 -- Append line below to current line
 umap({"n", "v"}, "<C-a>", "J")
 -- Re-run last command
