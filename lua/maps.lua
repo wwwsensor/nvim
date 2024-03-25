@@ -10,7 +10,7 @@ end
 
 --- PLUGINS ------------------
 -- Typst
-vim.cmd 'autocmd BufNewFile,BufRead *.typ lua vim.keymap.set("n", "|", ":TypstWatch<CR>")'
+vim.cmd 'au BufNewFile,BufRead *.typ lua vim.keymap.set("n", "|", ":TypstWatch<CR>")'
 -- LSP
 local vl = vim.lsp
 umap({"n", "v"}, "<leader>a", vl.buf.code_action) -- trigger code action
