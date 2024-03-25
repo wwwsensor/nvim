@@ -30,6 +30,8 @@ umap({"n", "x", "o"}, "f", "<Plug>(leap-forward)")
 umap("n", "<leader>cw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 -- Delete lines with string in buffer
 umap("n", "<leader>cc", [[:g/<C-r><C-w>/d]])
+-- Redo
+umap("n", "U", vim.cmd.redo)
 ------------------------------
 
 --- QOL ----------------------
@@ -45,8 +47,6 @@ umap({"n", "v"}, "<leader>D", [["_D]])
 -- Switch matches with centered cursor
 umap({"n", "v"}, "n", "nzzzv")
 umap({"n", "v"}, "N", "Nzzzv")
--- Enable Shift + Enter
-umap("i", "<S-CR>", "<ESC>lDO<ESC>pa")
 -- Append line below to current line
 umap({"n", "v"}, "<C-a>", "J")
 -- Re-run last command
