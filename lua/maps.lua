@@ -49,8 +49,6 @@ umap({"n", "v"}, "n", "nzzzv")
 umap({"n", "v"}, "N", "Nzzzv")
 -- Append line below to current line
 umap({"n", "v"}, "<C-a>", "J")
--- Re-run last command
-umap({"n", "v"}, ":", ":<Up><CR>")
 -- Amplified hjkl
 umap({"n", "v"}, "H", "0^")
 umap({"n", "v"}, "J", "5j")
@@ -62,7 +60,9 @@ umap({"n", "v"}, "L", "$")
 This replaces cmdline with cmdline-window
 This means cmdline mode doesn't exist now
 --]]
+umap({"n", "v", "i" }, "<C-c>", "<C-c><C-c>")
 umap({"n", "v"}, ";", "q:a")
 umap({"n", "v"}, "/", "q/a")
 umap({"n", "v"}, "?", "q?a")
-umap({"n", "v", "i" }, "<C-c>", "<C-c><C-c>")
+-- Re-run last command
+umap({"n", "v"}, ":", ":<Up><CR>")

@@ -32,4 +32,4 @@ trimLastBlank = function()
   local last_nonblank = vim.fn.prevnonblank(lines)
   if last_nonblank < lines then vim.api.nvim_buf_set_lines(0, last_nonblank, lines, true, {}) end
 end
-vim.cmd "autocmd BufWrite * lua trimLastBlank()"
+vim.cmd "au BufWrite * lua trimLastBlank()"

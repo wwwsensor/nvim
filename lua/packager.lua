@@ -18,8 +18,8 @@ local opts = {
 }
 local plugins = {
 
-  "folke/noice.nvim",
   "ggandor/leap.nvim",
+  "glacambre/firenvim",
   "andweeb/presence.nvim",
   "folke/tokyonight.nvim",
   "akinsho/bufferline.nvim",
